@@ -37,6 +37,9 @@
             this.storage = new System.Windows.Forms.Label();
             this.Programs = new System.Windows.Forms.CheckedListBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.games = new System.Windows.Forms.CheckedListBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Calculate = new System.Windows.Forms.Button();
             this.Selection.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,10 +55,12 @@
             // 
             // Selection
             // 
+            this.Selection.Controls.Add(this.Calculate);
+            this.Selection.Controls.Add(this.games);
             this.Selection.Controls.Add(this.Programs);
-            this.Selection.Location = new System.Drawing.Point(216, 37);
+            this.Selection.Location = new System.Drawing.Point(254, 37);
             this.Selection.Name = "Selection";
-            this.Selection.Size = new System.Drawing.Size(673, 457);
+            this.Selection.Size = new System.Drawing.Size(635, 457);
             this.Selection.TabIndex = 1;
             // 
             // yourpc
@@ -70,7 +75,7 @@
             // Graphics
             // 
             this.Graphics.AutoSize = true;
-            this.Graphics.Location = new System.Drawing.Point(14, 84);
+            this.Graphics.Location = new System.Drawing.Point(14, 98);
             this.Graphics.Name = "Graphics";
             this.Graphics.Size = new System.Drawing.Size(35, 13);
             this.Graphics.TabIndex = 3;
@@ -79,7 +84,7 @@
             // cpu
             // 
             this.cpu.AutoSize = true;
-            this.cpu.Location = new System.Drawing.Point(14, 112);
+            this.cpu.Location = new System.Drawing.Point(14, 146);
             this.cpu.Name = "cpu";
             this.cpu.Size = new System.Drawing.Size(35, 13);
             this.cpu.TabIndex = 4;
@@ -88,7 +93,7 @@
             // ram
             // 
             this.ram.AutoSize = true;
-            this.ram.Location = new System.Drawing.Point(14, 138);
+            this.ram.Location = new System.Drawing.Point(14, 190);
             this.ram.Name = "ram";
             this.ram.Size = new System.Drawing.Size(35, 13);
             this.ram.TabIndex = 5;
@@ -97,15 +102,31 @@
             // storage
             // 
             this.storage.AutoSize = true;
-            this.storage.Location = new System.Drawing.Point(14, 163);
+            this.storage.Location = new System.Drawing.Point(14, 229);
             this.storage.Name = "storage";
-            this.storage.Size = new System.Drawing.Size(35, 13);
+            this.storage.Size = new System.Drawing.Size(47, 13);
             this.storage.TabIndex = 6;
-            this.storage.Text = "label2";
+            this.storage.Text = "Storage:";
             // 
             // Programs
             // 
             this.Programs.FormattingEnabled = true;
+            this.Programs.Items.AddRange(new object[] {
+            "Office 365",
+            "Blender",
+            "Cinema 4D",
+            "Maya",
+            "Houdini",
+            "Unreal Engine",
+            "Unity",
+            "Adobe Premiere Pro",
+            "Adobe Indesign",
+            "Adobe Illustratior",
+            "Adobe Photoshop",
+            "Adobe After Effects",
+            "Adobe Lightroom",
+            "Adobe Dreamweaver",
+            "Adobe Fireworks"});
             this.Programs.Location = new System.Drawing.Point(3, 3);
             this.Programs.Name = "Programs";
             this.Programs.Size = new System.Drawing.Size(202, 439);
@@ -114,17 +135,54 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(271, 18);
+            this.label2.Location = new System.Drawing.Point(251, 21);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 13);
+            this.label2.Size = new System.Drawing.Size(136, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Programs";
+            this.label2.Text = "Programs You Going to use";
+            // 
+            // games
+            // 
+            this.games.FormattingEnabled = true;
+            this.games.Items.AddRange(new object[] {
+            "Hogwards Legacy",
+            "Call of Duty Modern Warfare",
+            "Call of Duty Warzone II",
+            "Sons of the Forest",
+            "Atomic Heart",
+            "The Last of Us Part 1",
+            "Resident Evil 4 Remake",
+            "Dead Space Remake"});
+            this.games.Location = new System.Drawing.Point(230, 3);
+            this.games.Name = "games";
+            this.games.Size = new System.Drawing.Size(202, 439);
+            this.games.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(481, 18);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(128, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Games You Going to Play";
+            // 
+            // Calculate
+            // 
+            this.Calculate.Location = new System.Drawing.Point(438, 3);
+            this.Calculate.Name = "Calculate";
+            this.Calculate.Size = new System.Drawing.Size(194, 30);
+            this.Calculate.TabIndex = 2;
+            this.Calculate.Text = "Calculate";
+            this.Calculate.UseVisualStyleBackColor = true;
+            this.Calculate.Click += new System.EventHandler(this.Calculate_Click);
             // 
             // mainpage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(901, 506);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.storage);
             this.Controls.Add(this.ram);
@@ -153,6 +211,9 @@
         private System.Windows.Forms.Label storage;
         private System.Windows.Forms.CheckedListBox Programs;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.CheckedListBox games;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button Calculate;
     }
 }
 
